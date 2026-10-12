@@ -1,0 +1,4 @@
+timestamp,can_id,pid,name,value,unit
+2026-10-12T14:05:01+00:00,7E8,0x0C,RPM,1750.0,rpm
+2026-10-12T14:05:02+00:00,7E8,0x0D,Speed,42,km/h
+2026-10-12T14:05:03+00:00,7E8,0x05,Coolant Temp,88,C

@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+.venv/
+report.json
+can-log.csv
+.cache/
+firmware/build/
+.pytest_cache/
