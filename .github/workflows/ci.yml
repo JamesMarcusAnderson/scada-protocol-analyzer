@@ -1,0 +1,15 @@
+name: ci
+on: [push, pull_request]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.11' }
+      - run: pip install -r requirements.txt
+      - run: python -m py_compile analyzer/modbus.py analyzer/obd.py analyzer/main.py
+      - run: python -m pytest tests -q
+      - run: python -c "import json; json.load(open('docs/modbus-output.json'))"
+      # The documented quickstart must actually run.
+      - run: python -m analyzer --help
